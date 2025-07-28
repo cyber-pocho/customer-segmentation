@@ -82,12 +82,13 @@ Customer segmentation helps businesses:
 ---
 
 ## 📂 Project Structure
+project-root/
 ├── data/
-│ └── raw/ # Raw transactional files
+│   └── raw/                  # Raw transactional files
 ├── src/
-│ ├── segmentation.py # Core class
-│ └── analysis.ipynb # Notebook walkthrough
-├── visuals/ # Cluster plots
+│   ├── segmentation.py       # Core class
+│   └── analysis.ipynb        # Notebook walkthrough
+├── visuals/                  # Cluster plots
 ├── requirements.txt
 └── README.md
 
