@@ -1,84 +1,108 @@
-# Customer Segmentation Analysis Using RFM and Unsupervised Learning
+# Customer Segmentation with RFM and Machine Learning
 
-## 🧭 Project Overview
+## 🔍 Overview
 
-This repository presents a structured approach to customer segmentation through **Recency, Frequency, and Monetary (RFM)** analysis and unsupervised machine learning techniques. The implementation showcases skills in object-oriented programming, statistical data processing, and business intelligence development. It serves as a robust portfolio project in applied data science.
+This project applies **RFM (Recency, Frequency, Monetary)** analysis and unsupervised learning to identify customer segments and generate actionable business insights. Built with a modular, object-oriented structure, it automates the entire process — from raw data cleaning to strategy recommendations.
 
-## 📊 Business Context
+Ideal as a real-world portfolio project for business intelligence, customer analytics, and CRM consulting.
 
-Customer segmentation is a fundamental strategy in customer relationship management. It allows organizations to:
+---
 
-- **Personalize Marketing**: Design and deliver targeted promotional content
-- **Optimize Resource Allocation**: Prioritize high-value customer cohorts
-- **Improve Customer Retention**: Detect and re-engage at-risk customers
-- **Increase Revenue**: Tailor strategies that maximize value across customer segments
+## 💼 Business Impact
 
-## 🛠️ Technical Stack
+Customer segmentation helps businesses:
 
-- **Python**: Primary programming environment
-- **Pandas**: Data wrangling and preprocessing
-- **NumPy**: Efficient numerical computation
-- **Scikit-learn**: Clustering algorithms and evaluation metrics
-- **Matplotlib & Seaborn**: Visual analytics and exploratory data analysis
+- 🎯 **Target marketing campaigns** to specific customer types
+- 💰 **Boost retention and revenue** through personalized strategies
+- 🧠 **Understand behavioral patterns** across the customer lifecycle
+- 📉 **Reduce churn** by identifying at-risk segments
 
-## ⚙️ Core Features
+---
 
-- **Object-Oriented Architecture**: Encapsulated in a modular `CustomerSegmentationAnalyzer` class
-- **End-to-End Automation**: From raw data ingestion to insight generation
-- **Multiple Clustering Techniques**: Implementation of both KMeans and DBSCAN
-- **Model Selection Tools**: Elbow method and silhouette scoring for hyperparameter tuning
-- **Insightful Visualizations**: Heatmaps, histograms, cluster profiles, and correlation matrices
-- **Data-Driven Recommendations**: Business actions informed by segmentation outputs
+## 🛠️ Tools & Technologies
 
-## 📈 Methodological Framework
+| Tool          | Purpose                           |
+|---------------|------------------------------------|
+| Python        | Core language                     |
+| Pandas, NumPy | Data wrangling and transformation |
+| Scikit-learn  | Clustering models (KMeans, DBSCAN)|
+| Matplotlib, Seaborn | Visual analytics             |
+
+---
+
+## 🔧 Key Features
+
+- Encapsulated in a reusable `CustomerSegmentationAnalyzer` class
+- Implements **KMeans** and **DBSCAN** clustering
+- Model tuning with Elbow method & Silhouette scores
+- Visual summaries: heatmaps, histograms, correlation plots
+- Business-oriented **segment labeling** and **recommendations**
+
+---
+
+## 🧪 Methodology
 
 ### 1. Data Preprocessing
+- Removal of returns, invalid invoices, duplicates
+- Imputation of missing values
+- Feature creation (e.g., `TotalAmount`)
 
-- Removal of return transactions and invalid invoice entries
-- Elimination of duplicates and imputation of missing values
-- Construction of derived variables, such as `TotalAmount`
+### 2. RFM Calculation
+- **Recency** = days since last purchase
+- **Frequency** = number of transactions
+- **Monetary** = total spend
+- Features normalized via MinMax scaling
 
-### 2. RFM Feature Engineering
-
-- **Recency**: Days elapsed since the last transaction (lower values preferred)
-- **Frequency**: Count of unique transactions per customer
-- **Monetary**: Aggregate customer spending
-- Features normalized via MinMax scaling to standardize input space for clustering
-
-### 3. Clustering Analysis
-
-- Application of **KMeans** clustering (k optimized using Elbow and Silhouette methods)
-- Exploratory use of **DBSCAN** for density-based segmentation
-- Final model selected with **k = 4**, yielding a silhouette score of **[X.XXX]**
+### 3. Clustering
+- KMeans clustering with optimal `k` selected via:
+  - Elbow method
+  - Silhouette score (final score: **X.XXX**)
+- DBSCAN tested for non-linear clusters
 
 ### 4. Segment Profiling
 
-Customer segments were identified and labeled based on statistical properties:
+| Segment         | Description                                           |
+|-----------------|-------------------------------------------------------|
+| 💎 VIP Champions | High frequency, high value, recent purchases         |
+| 🌟 Loyal Customers | Repeat buyers, consistent spend                     |
+| 😴 Lost Customers  | No recent activity, historically active             |
+| 🆕 New Customers   | First-time buyers with potential for growth         |
 
-- 💎 **VIP Champions**: High frequency, high spending, recent purchasers
-- 🌟 **Loyal Customers**: Consistent purchasing patterns with moderate-to-high value
-- 😴 **Lost Customers**: No recent activity; historically active
-- 🆕 **New Customers**: Recent first-time purchasers; growth opportunity
+---
 
-## 🔍 Segment Insights
+## 💡 Business Recommendations
 
-### Strategic Recommendations
+| Segment         | Strategy                                              |
+|-----------------|-------------------------------------------------------|
+| VIP Champions   | Loyalty tiers, premium perks                          |
+| Loyal Customers | Referral incentives, exclusive deals                  |
+| Lost Customers  | Win-back campaigns with discounts                     |
+| New Customers   | Onboarding flows, bundles, cross-sells                |
 
-| Segment         | Recommended Strategy                                            |
-|-----------------|------------------------------------------------------------------|
-| VIP Champions   | Design exclusive loyalty tiers with premium perks               |
-| Loyal Customers | Introduce a points-based reward system with referral incentives |
-| Lost Customers  | Launch win-back campaigns with targeted discounts               |
-| New Customers   | Offer onboarding journeys with bundled or cross-sell offers     |
+---
 
-## 📁 Repository Structure
-
+## 📂 Project Structure
 ├── data/
-│   └── raw/                  # Raw transactional data files
+│ └── raw/ # Raw transactional files
 ├── src/
-│   └── segmentation.py    
-│   └── analysis.ipynb   # Core class and analysis logic
-├── visuals/
-│   └── *.png                 # Cluster visualizations and plots
-├── README.md
-└── requirements.txt
+│ ├── segmentation.py # Core class
+│ └── analysis.ipynb # Notebook walkthrough
+├── visuals/ # Cluster plots
+├── requirements.txt
+└── README.md
+
+## ▶️ How to Run
+
+1. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+2. Open and run the Jupyter notebook:
+    src/analysis.ipynb
+
+## 📬 Contact
+
+📌 **Author**: Julian Alfonso y Gomez  
+📧 **Email**: juliandavid.alfonso.gomez@gmail.com  
+🕒 **Last Updated**: July 28, 2025
+
+> This project demonstrates advanced customer analytics and unsupervised learning — with real business application.
